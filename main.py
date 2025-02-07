@@ -3,12 +3,10 @@ import os
 from dotenv import load_dotenv
 import requests
 import requests_cache
-from langchain_ollama import OllamaLLM
 # Load environment variables
 load_dotenv()
 # Set up an in-memory cache that lasts for the session
 requests_cache.install_cache(backend='memory', expire_after=60)
-ollama_model = OllamaLLM(model="deepseek-r1:latest")
 
 
 class Llm_Setup:
